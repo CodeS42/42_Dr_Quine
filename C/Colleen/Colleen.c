@@ -1,22 +1,21 @@
-#include <stdio.h>
 /*
-	To use printf
+	Colleen
 */
-#define TAB 9
+#include <stdio.h>
 #define NEW_LINE 10
 #define DOUBLE_QUOTE 34
 
-void	print_source_code()
+void	print_code()
 {
-	/*
-		String who contains source code
-	*/
-	char *code = "#include <stdio.h>%2$c/*%2$c%1$cTo use printf%2$c*/%2$c#define TAB 9%2$c#define NEW_LINE 10%2$c#define DOUBLE_QUOTE 34%2$c%2$cvoid%1$cprint_source_code()%2$c{%2$c%1$c/*%2$c%1$c%1$cString who contains source code%2$c%1$c*/%2$c%1$cchar *code = %3$c%4$s%3$c;%2$c%1$cprintf(code, TAB, NEW_LINE, DOUBLE_QUOTE, code);%2$c}%2$c%2$cint main(void)%2$c{%2$c%1$cprint_source_code();%2$c%1$creturn (0);%2$c}";
-	printf(code, TAB, NEW_LINE, DOUBLE_QUOTE, code);
+	char *code = "/*%1$c	Colleen%1$c*/%1$c#include <stdio.h>%1$c#define NEW_LINE 10%1$c#define DOUBLE_QUOTE 34%1$c%1$cvoid	print_code()%1$c{%1$c	char *code = %2$c%3$s%2$c;%1$c	printf(code, NEW_LINE, DOUBLE_QUOTE, code);%1$c}%1$c%1$cint	main(void)%1$c{%1$c	/*%1$c		Call the function that prints the code%1$c	*/%1$c	print_code();%1$c	return (0);%1$c}";
+	printf(code, NEW_LINE, DOUBLE_QUOTE, code);
 }
 
-int main(void)
+int	main(void)
 {
-	print_source_code();
+	/*
+		Call the function that prints the code
+	*/
+	print_code();
 	return (0);
 }

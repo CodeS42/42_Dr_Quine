@@ -1,2 +1,0 @@
-securiser les fd, le code etc
-tout verifier avec valgrind
